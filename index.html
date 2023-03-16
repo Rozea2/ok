@@ -2,16 +2,33 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-<div style="text-align:center;">
-
   <title>Formularz</title>
   <style>
-    form {
+    html, body {
       width: 100%;
       margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    form {
+      width: 100%;
+      max-width: 600px;
+      margin: 0;
+      font-size: 16px;
+    }
+    label, input, textarea {
+      font-size: 16px;
+    }
+    input[type="submit"] {
+      font-size: 16px;
+      padding: 10px;
     }
   </style>
-  </head>
+</head>
   <body>
     <h1>Formularz kontaktowy</h1>
     <form action="https://formspree.io/f/mjvpdnlv" method="POST">
