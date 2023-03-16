@@ -1,23 +1,32 @@
 <?php
 if(isset($_POST['email'])) {
-     
-    // Wpisz tutaj sw�j adres e-mail
+
+    // adres e-mail, na który zostaną przesłane wiadomości
     $to = "rozea@wp.pl";
-     
-    // Pobierz dane z formularza
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-     
-    // Utw�rz nag��wki wiadomo�ci e-mail
-    $headers = "From: $email \r\n";
-    $headers .= "Reply-To: $email \r\n";
-     
-    // Wys�anie wiadomo�ci e-mail
-    mail($to, $name, $message, $headers);
-     
-    // Wy�wietlenie komunikatu o wys�aniu wiadomo�ci
-    echo "Dzi�kujemy za kontakt. Odpowiemy najszybciej jak to b�dzie mo�liwe.";
-     
+
+    // temat wiadomości
+    $subject = "Nowa wiadomość od ".$_POST['name'];
+
+    // treść wiadomości
+    $message = "
+    Imię: ".$_POST['name']."\n
+    Email: ".$_POST['email']."\n
+    Wiadomość: ".$_POST['message']."\n
+    ";
+
+    // nagłówki wiadomości e-mail
+    $headers = "From: ".$_POST['email']."\r\n";
+    $headers .= "Reply-To: ".$_POST['email']."\r\n";
+    $headers .= "Content-type: text/plain; charset=UTF-8\r\n";
+
+    // wysłanie wiadomości e-mail
+    if(mail($to, $subject, $message, $headers)) {
+        echo "Wiadomość została wysłana.";
+    } else {
+        echo "Wystąpił błąd podczas wysyłania wiadomości.";
+    }
+
+} else {
+    echo "Wystąpił błąd podczas wysyłania wiadomości.";
 }
 ?>
