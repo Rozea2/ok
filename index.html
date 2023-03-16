@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -24,33 +25,36 @@
       font-size: 42px;
     }
     input[type="submit"] {
-  font-size: 36px;
-  padding: 40px 60px; /* większa wartość padding */
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+      font-size: 36px;
+      padding: 40px 60px; /* większa wartość padding */
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #0062cc;
+    }
   </style>
 </head>
-  <body>
-    <div style="text-align:center;">
+<body>
+  <div style="text-align:center;">
     <h1>Formularz kontaktowy</h1>
     <form action="https://formspree.io/f/mjvpdnlv" method="POST">
       <div style="text-align:center;">
         <label for="name">Имя и фамилия:</label><br>
         <input type="text" id="name" name="name"><br><br>
-        
-       <label for="name">Имя и фамилия:</label><br>
+        <label for="name">Имя и фамилия:</label><br>
         <input type="text" id="name" name="name"><br><br>
 
          <label for="name">Имя и фамилия:</label><br>
         <input type="text" id="name" name="name"><br><br>
 
-        <button type="submit">Отправить</button>
+        <input type="submit" value="Отправить">
       </div>
     </form>
-  </body>
+  </div>
+</body>
 </html>
