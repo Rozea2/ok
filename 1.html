@@ -1,24 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Formularz zapisuj¹cy dane do pliku</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
 </head>
 <body>
-
-  <form action="submit-form.php" method="post">
-  
-    <label for="dane1">Dane numer 1:</label>
-    <input type="text" name="dane1" id="dane1"><br>
-      
-    <label for="dane2">Dane numer 2:</label>
-    <input type="text" name="dane2" id="dane2"><br>
-      
-    <label for="dane3">Dane numer 3:</label>
-    <input type="text" name="dane3" id="dane3"><br>
-    
-    <input type="submit" value="Zapisz do pliku">
-    
-  </form>
-
+    <h1>Formularz</h1>
+    <form action="submit-form.php" method="POST">
+        <label for="data1">Dane numer 1:</label>
+        <input type="text" id="data1" name="data1"><br><br>
+        <label for="data2">Dane numer 2:</label>
+        <input type="text" id="data2" name="data2"><br><br>
+        <label for="data3">Dane numer 3:</label>
+        <input type="text" id="data3" name="data3"><br><br>
+        <input type="submit" value="WyÅ›lij">
+    </form>
 </body>
 </html>
