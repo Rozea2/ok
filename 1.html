@@ -82,7 +82,10 @@
     </form>
   
 		<script>
-function submitForm() {
+function sendFormData(event) {
+  // Zatrzymaj domyślne zachowanie formularza
+  event.preventDefault();
+
   // Pobierz wartości pól wejściowych
   var liczba1 = document.getElementById("liczba1").value;
   var liczba2 = document.getElementById("liczba2").value;
@@ -99,17 +102,19 @@ function submitForm() {
 
   // Obsłuż odpowiedź serwera
   xhr.onreadystatechange = function() {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      // Odpowiedź serwera jest pusta, ale możesz dodać dowolny kod, który chcesz wykonać po udanej wysyłce formularza
-      alert("Formularz został wysłany pomyślnie!");
+    if (xhr.readyState == 4) {
+      if (xhr.status == 200) {
+        // Wysyłka zakończona sukcesem, wyświetl komunikat
+        alert("Formularz został wysłany pomyślnie!");
+      } else {
+        // Wysyłka nie powiodła się, wyświetl komunikat o błędzie
+        alert("Wystąpił błąd podczas wysyłania formularza!");
+      }
     }
   }
 
   // Prześlij formularz za pomocą AJAX
   xhr.send('liczba1=' + liczba1 + '&liczba2=' + liczba2 + '&promo=' + promo);
-
-  // Zwróć wartość false, aby zapobiec standardowemu wysyłaniu formularza
-  return false;
 }
 </script>
 		
