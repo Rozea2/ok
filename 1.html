@@ -81,23 +81,16 @@
           </div>
     </form>
   
-		<script>
-  function sendFormData(event) {
-    event.preventDefault(); // zatrzymaj domyślne zachowanie formularza
-    
-    // Wyślij dane formularza za pomocą żądania HTTP POST
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://formspree.io/f/mnqyzeea", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        // Przekieruj użytkownika na stronę "123.html"
-        window.location.href = "123.html";
-      }
-    };
-    let formData = new FormData(document.getElementById("myForm"));
-    xhr.send(new URLSearchParams(formData));
-  }
+		<<script>
+function openConfirmation() {
+  var w = 10;
+  var h = 10;
+  var left = (screen.width/2)-(w/2);
+  var top = (screen.height/2)-(h/2);
+  var confirmationUrl = "confirmation.html";
+
+  window.open(confirmationUrl, "", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width="+w+",height="+h+",top="+top+",left="+left);
+}
 </script>
 		
 		
