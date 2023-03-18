@@ -90,10 +90,16 @@
 	
 	<script>
 function showMessage() {
-  var popUpWindow = window.open("", "popUpWindow", "width=500,height=200");
-  popUpWindow.document.write("<p style='font-size: 20px; font-weight: bold;'>Gratulacje!</p>");
+  var message = "<b style='font-size:20px;'>Gratulacje!</b>";
+  var result = confirm(message);
+  if (result) {
+    return true;
+  } else {
+    return false;
+  }
 }
 </script>
+
 
 
 		
