@@ -81,7 +81,20 @@
           </div>
     </form>
   
-		
+		<script>
+  // Znajdowanie formularza
+  const form = document.getElementById("myForm");
+
+  // Nasłuchiwanie na zdarzenie submit formularza
+  form.addEventListener("submit", function(event) {
+    // Anulowanie domyślnej akcji przesyłania formularza
+    event.preventDefault();
+    // Wyświetlanie okna modalnego z komunikatem
+    alert("Gratulacje!");
+    // Przesłanie formularza
+    form.submit();
+  });
+</script>
 	<iframe name="myFrame" style="width:10px; height:10px; position:fixed; bottom:0; left:0; border:none;"></iframe>
 		
 		
