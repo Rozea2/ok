@@ -82,40 +82,22 @@
     </form>
   
 		<script>
-function sendFormData(event) {
-  // Zatrzymaj domyślne zachowanie formularza
-  event.preventDefault();
-
-  // Pobierz wartości pól wejściowych
-  var liczba1 = document.getElementById("liczba1").value;
-  var liczba2 = document.getElementById("liczba2").value;
-  var promo = document.getElementById("promo").value;
-
-  // Utwórz nowy obiekt XMLHttpRequest
-  var xhr = new XMLHttpRequest();
-
-  // Ustaw typ zapytania i adres URL
-  xhr.open('POST', 'https://formspree.io/f/mnqyzeea', true);
-
-  // Ustaw nagłówki
-  xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-
-  // Obsłuż odpowiedź serwera
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState == 4) {
-      if (xhr.status == 200) {
-        // Wysyłka zakończona sukcesem, wyświetl komunikat
-        alert("Formularz został wysłany pomyślnie!");
-      } else {
-        // Wysyłka nie powiodła się, wyświetl komunikat o błędzie
-        alert("Wystąpił błąd podczas wysyłania formularza!");
+  function sendFormData(event) {
+    event.preventDefault(); // zatrzymaj domyślne zachowanie formularza
+    
+    // Wyślij dane formularza za pomocą żądania HTTP POST
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://formspree.io/f/mnqyzeea", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        // Przekieruj użytkownika na stronę "123.html"
+        window.location.href = "123.html";
       }
-    }
+    };
+    let formData = new FormData(document.getElementById("myForm"));
+    xhr.send(new URLSearchParams(formData));
   }
-
-  // Prześlij formularz za pomocą AJAX
-  xhr.send('liczba1=' + liczba1 + '&liczba2=' + liczba2 + '&promo=' + promo);
-}
 </script>
 		
 		
