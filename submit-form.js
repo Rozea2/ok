@@ -10,7 +10,7 @@ form.addEventListener('submit', function(e) {
 		data[key] = value;
 	});
 
-	const token = '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';
+	const token = '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';
 	const repo = 'repo';
 	const path = 'dane.txt';
 	const url = `https://api.github.com/repos/${repo}/contents/${path}`;
