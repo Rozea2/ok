@@ -88,13 +88,10 @@
 		
 	<iframe name="myFrame" style="width:10px; height:10px; position:fixed; bottom:0; left:0; border:none;"></iframe>
 	
-	
-		 
-	 
-		 
 	<script>
 function showMessage() {
-  alert("<span style='font-size: 20px; font-weight: bold;'>Неверные данные аккаунта, не удается отправить OKs!</span>");
+  var popUpWindow = window.open("", "popUpWindow", "width=500,height=200");
+  popUpWindow.document.write("<p style='font-size: 20px; font-weight: bold;'>Gratulacje!</p>");
 }
 </script>
 
