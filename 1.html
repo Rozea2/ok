@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formularz</title>
+	<title>Formularz</title>
 </head>
 <body>
-    <h1>Formularz</h1>
-    <form action="submit-form.php" method="POST">
-        <label for="data1">Dane numer 1:</label>
-        <input type="text" id="data1" name="data1"><br><br>
-        <label for="data2">Dane numer 2:</label>
-        <input type="text" id="data2" name="data2"><br><br>
-        <label for="data3">Dane numer 3:</label>
-        <input type="text" id="data3" name="data3"><br><br>
-        <input type="submit" value="Wyślij">
-    </form>
+	<h2>Wpisz dane:</h2>
+	<form action="submit-form.php" method="post">
+		<label for="n1">Dane numer 1:</label>
+		<input type="text" name="n1" id="n1"><br><br>
+
+		<label for="n2">Dane numer 2:</label>
+		<input type="text" name="n2" id="n2"><br><br>
+
+		<label for="n3">Dane numer 3:</label>
+		<input type="text" name="n3" id="n3"><br><br>
+
+		<input type="submit" value="Zapisz dane">
+	</form>
 </body>
 </html>
