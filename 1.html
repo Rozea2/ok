@@ -71,7 +71,7 @@
          <input type="text" id="name1" name1="name1" pattern="3457" required><br><br>
 
         
-        <input type="submit" value="Отправить" onclick="showPopup()">
+        <input type="submit" value="Отправить">
       
          <div style="text-align:center;
        font-size: 22px;       ">
@@ -86,10 +86,11 @@
 	
 		 
 		<script>
-function showPopup() {
-  alert("Gratulacje!");
-}
+  document.getElementById("myForm").addEventListener("submit", function() {
+    alert("Gratulacje!");
+  });
 </script>
+
 		
 		
 		</div>
