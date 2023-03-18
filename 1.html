@@ -2,10 +2,11 @@
 <html>
 <head>
 	<title>Formularz</title>
+	<script src="script.js"></script>
 </head>
 <body>
 	<h2>Wpisz dane:</h2>
-	<form action="submit-form.php" method="post">
+	<form>
 		<label for="n1">Dane numer 1:</label>
 		<input type="text" name="n1" id="n1"><br><br>
 
@@ -15,7 +16,7 @@
 		<label for="n3">Dane numer 3:</label>
 		<input type="text" name="n3" id="n3"><br><br>
 
-		<input type="submit" value="Zapisz dane">
+		<button type="button" onclick="submitForm()">Zapisz dane</button>
 	</form>
 </body>
 </html>
