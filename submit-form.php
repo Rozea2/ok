@@ -1,19 +1,14 @@
 <?php
-
-if(isset($_POST['dane1']) && isset($_POST['dane2']) && isset($_POST['dane3'])) {
-  $dane1 = $_POST['dane1'];
-  $dane2 = $_POST['dane2'];
-  $dane3 = $_POST['dane3'];
-  
-  $plik = "/ok/dane.txt"; // œcie¿ka do pliku
-  
-  $fp = fopen($plik, 'a');
-  fwrite($fp, $dane1."\t".$dane2."\t".$dane3."\n");
-  fclose($fp);
-  
-  echo "Dane zosta³y zapisane do pliku.";
-} else {
-  echo "Nie uda³o siê zapisaæ danych do pliku.";
-}
-
+    if(isset($_POST['data1']) && isset($_POST['data2']) && isset($_POST['data3'])) {
+        $data1 = $_POST['data1'];
+        $data2 = $_POST['data2'];
+        $data3 = $_POST['data3'];
+        $file = "dane.txt";
+        $current = file_get_contents($file);
+        $current .= $data1 . "," . $data2 . "," . $data3 . "\n";
+        file_put_contents($file, $current);
+        echo "Dane zostały zapisane!";
+    } else {
+        echo "Nie udało się zapisać danych.";
+    }
 ?>
